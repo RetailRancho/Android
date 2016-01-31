@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="io.rancho.retail.beaconstac.Activities.SplashActivity">
+    tools:context="io.rancho.retail.beaconstac.activities.SplashActivity">
 
 
     <ImageView
@@ -13,7 +13,7 @@
         android:layout_height="240dp"
         android:id="@+id/logo"
         android:scaleType="fitXY"
-        android:src="@drawable/ic_launcher"
+        android:src="@drawable/final_logo"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 

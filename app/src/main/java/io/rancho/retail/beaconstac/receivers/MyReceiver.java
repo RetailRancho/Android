@@ -1,4 +1,4 @@
-package io.rancho.retail.beaconstac.Receivers;
+package io.rancho.retail.beaconstac.receivers;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -14,7 +14,8 @@ import com.mobstac.beaconstac.models.MSBeacon;
 
 import java.util.ArrayList;
 
-import io.rancho.retail.beaconstac.Activities.MainActivity;
+import io.rancho.retail.beaconstac.activities.LayoutActivity;
+import io.rancho.retail.beaconstac.activities.MainActivity;
 import io.rancho.retail.beaconstac.R;
 
 /**
@@ -26,30 +27,30 @@ public class MyReceiver extends BeaconstacReceiver {
 
     @Override
     public void exitedBeacon(Context context, MSBeacon beacon) {
-        Log.v(MyReceiver.class.getName(), "exited called " + beacon.getBeaconKey());
+        Log.v("ABC", "exited called " + beacon.getBeaconKey());
         sendNotification(context, "Exited " + beacon.getMajor() + " : " + beacon.getMinor());
     }
 
     @Override
     public void rangedBeacons(Context context, ArrayList<MSBeacon> beacons) {
-        Log.v(MyReceiver.class.getName(), "Ranged called " + beacons.size());
+        Log.v("ABC", "Ranged called " + beacons.size());
         sendNotification(context, "Ranged " + beacons.size() + " beacons");
     }
 
     @Override
     public void campedOnBeacon(Context context, MSBeacon beacon) {
-        Log.v(MyReceiver.class.getName(), "camped on called " + beacon.getBeaconKey());
+        Log.v("ABC", "camped on called " + beacon.getBeaconKey());
         sendNotification(context, "Camped " + beacon.getMajor() + " : " + beacon.getMinor());
     }
 
     @Override
     public void triggeredRule(Context context, String ruleName, ArrayList<MSAction> actions) {
-        Log.v(MyReceiver.class.getName(), "triggered rule called " + ruleName);
+        Log.v("ABC", "triggered rule called " + ruleName);
     }
 
     @Override
     public void enteredRegion(Context context, String region) {
-        Log.v(MyReceiver.class.getName(), "Entered region " + region);
+        Log.v("ABC", "Entered region " + region);
     }
 
     @Override
@@ -57,17 +58,17 @@ public class MyReceiver extends BeaconstacReceiver {
         notificationManager = (NotificationManager)
                 context.getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancelAll();
-        Log.v(MyReceiver.class.getName(), "Exited region " + region);
+        Log.v("ABC", "Exited region " + region);
     }
 
     @Override
     public void enteredGeofence(Context context, ArrayList<MSPlace> arrayList) {
-        Log.v(MyReceiver.class.getName(), "Entered geofence");
+        Log.v("ABC", "Entered geofence");
     }
 
     @Override
     public void exitedGeofence(Context context, ArrayList<MSPlace> arrayList) {
-        Log.v(MyReceiver.class.getName(), "Exited geofence");
+        Log.v("ABC", "Exited geofence");
     }
 
     @Override
