@@ -48,7 +48,8 @@ public class Messages extends Fragment {
         myAPI.getOffers("1", new Callback<Offers>() {
             @Override
             public void success(Offers offers, Response response) {
-
+                recyclerAdapterOffers = new RecyclerAdapterOffers(getContext(),offers.getArray());
+                recyclerView.setAdapter(recyclerAdapterOffers);
             }
 
             @Override

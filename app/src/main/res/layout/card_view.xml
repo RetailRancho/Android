@@ -26,11 +26,11 @@
             android:typeface="serif"
             android:layout_height="100dp"
             android:id="@+id/card_text_view"
-            android:text="Yoyoyoyooyoyooyoyoyooy"
             android:background="#FFFFFF"
             android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textSize="20sp"
+            android:textSize="17sp"
+            android:textColor="#000"
             android:layout_toRightOf="@+id/card_image_view"/>
         </RelativeLayout>
 

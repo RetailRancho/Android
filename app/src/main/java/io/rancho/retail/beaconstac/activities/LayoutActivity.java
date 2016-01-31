@@ -5,12 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -18,8 +14,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -100,6 +94,7 @@ public class LayoutActivity extends AppCompatActivity {
                                     product_price.setText("\nPrice:₹1399");
                                     product_info.setText("Fabric:Denim \nType:Slim-fit \nFit:Regular");
                                     imageView.setImageResource(R.drawable.layout2);
+                                    Toast.makeText(getBaseContext(),"You have added Jeans in the to-do list!",Toast.LENGTH_LONG).show();
                                 }
                                 else if(key == "Shoes")
                                 {

@@ -14,9 +14,8 @@ import com.mobstac.beaconstac.models.MSBeacon;
 
 import java.util.ArrayList;
 
-import io.rancho.retail.beaconstac.activities.LayoutActivity;
-import io.rancho.retail.beaconstac.activities.MainActivity;
 import io.rancho.retail.beaconstac.R;
+import io.rancho.retail.beaconstac.activities.MainActivity;
 
 /**
  * Created by Chinmay on 1/30/16.
@@ -28,13 +27,13 @@ public class MyReceiver extends BeaconstacReceiver {
     @Override
     public void exitedBeacon(Context context, MSBeacon beacon) {
         Log.v("ABC", "exited called " + beacon.getBeaconKey());
-        sendNotification(context, "Exited " + beacon.getMajor() + " : " + beacon.getMinor());
+//        sendNotification(context, "Exited " + beacon.getMajor() + " : " + beacon.getMinor());
     }
 
     @Override
     public void rangedBeacons(Context context, ArrayList<MSBeacon> beacons) {
         Log.v("ABC", "Ranged called " + beacons.size());
-        sendNotification(context, "Ranged " + beacons.size() + " beacons");
+//        sendNotification(context, "Ranged " + beacons.size() + " beacons");
     }
 
     @Override
